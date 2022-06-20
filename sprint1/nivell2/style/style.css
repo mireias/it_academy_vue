@@ -1,0 +1,240 @@
+/* Resetegem la pagina per eliminar valors de referència del navegador */
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+.div-max-width{
+    display:none;
+    background-image: url("https://placeimg.com/1300/720/animals");
+    background-repeat:no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    opacity:0.75;
+    overflow: hidden;
+}
+
+.p-max-width{
+    font-size: 5em;
+    margin:5vw;
+}
+
+.flex-column{
+    display:flex; 
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.flex-row{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+ 
+header{
+     padding:1vh; 
+     font-size: 1.5em;
+}
+
+.div-header{
+    color:#797176;
+    margin-bottom:1vh;
+    justify-content: space-between;
+    padding:2vw;
+}
+
+.img-logo{
+    width:15vw;
+}
+.item-nav{
+    flex-grow:2;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    color:#797176;
+}
+
+a:hover{
+    color:#EE7463;
+}
+
+.social-media-item{
+    padding:1.5vw;
+}
+
+.div-title{
+    background-image: url("/img/header.jpg");
+    background-repeat:no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;   
+    align-items: flex-end;
+}
+
+h1{
+    text-align:center;
+    color:rgba(247, 147, 15, 0.589);
+    background-color:rgba(165, 164, 160, 0.322);
+    padding:10vh;    
+}
+
+main{
+    padding:1vh;
+}
+
+
+.item-main{
+    flex:1 1 2vw;
+    align-self: stretch;
+}
+
+.item-double{
+    flex-grow:2;
+} 
+
+section{ 
+    color:#8e8f91;
+    background-color:#d0d2d6;
+}
+
+article{
+    padding:1vw;
+    margin:0.5vw;
+    background-color: white;
+}
+
+
+
+.item-article{
+    flex-basis:45%;
+    align-items: stretch;
+}
+
+h3{
+    background-color: #FF5DA2;
+    color:white;
+    padding:2vh 0 1vh 1vw;
+    margin-top:0.5vh;
+}
+
+.img-article{
+    background-repeat:no-repeat;
+    min-height: 40vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    align-items: flex-end;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.sakura{
+    background-image: url("/img/sakura.jpg");
+}
+
+.menjar{
+    background-image:url("/img/comida.jpg")
+}
+
+.nit{
+    background-image:url("/img/noche.jpg")
+}
+
+.fuji{
+    background-image:url("/img/fuji.jpg")
+}
+.sakura p, .menjar p, .nit p, .fuji p{
+    color:#f4bb40;
+    padding-left:1vw;
+}
+
+.article-contain{
+    column-count: 2;
+}
+
+.a-article{
+    margin-top:2vh;
+}
+
+
+aside{
+    background-color:#FF5DA2;
+    color:#FFE162;
+    padding:1vw; 
+}
+
+
+footer{
+    background-color:black;
+    padding:1vh;
+}
+
+footer p{
+    background-color: #F47340;
+    text-align: center;
+}
+
+@media (min-width: 1201px) {  
+    .div-max-width {
+        display:inline-block;
+    }
+    main{
+        padding: 0;
+    }
+    header, main, article, section p, div, a, h3, aside,footer{
+        display:none;
+    }   
+}
+
+@media (max-width: 768px){
+    .item-main{
+        flex:1 1 auto;
+    }
+    aside{
+        margin-top:1vh;
+    }
+    a span{
+        display:none;
+    }
+    h1{
+        font-size: 0.90em;
+    }
+}
+ 
+@media (min-width:320px) and (max-width:768px){
+    main{
+        background-color: yellow;
+    }
+    
+}
+
+@media(max-width:320px){
+    .div-header{
+        flex-flow:column wrap;
+        align-items:stretch;
+    }
+    .img-logo{
+        margin: 0 auto;
+    }
+    .item-nav{
+        margin:2vh;
+    }
+    .ul-social-media{
+        justify-content: center;
+    }
+    .item-article{
+        flex-basis:auto;
+    }
+
+}

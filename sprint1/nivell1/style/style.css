@@ -1,0 +1,150 @@
+/* Resetegem la pagina per eliminar valors de referència del navegador */
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.div-max-width{
+    display:none;
+    background-image: url("https://placeimg.com/1300/720/animals");
+    background-repeat:no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    opacity:0.75;
+    overflow: hidden;
+}
+
+.p-max-width{
+    font-size: 5em;
+    margin:5vw;
+}
+
+.flex-column{
+    display:flex; 
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.flex-row{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+ 
+header{
+    background-color: black;
+    padding:1vh; 
+}
+
+.div-header{
+    background-color: #6c4b85;
+    color:#d37cb1;
+    margin-bottom:1vh;
+    justify-content: space-between;
+}
+
+.item-nav{
+    flex-grow:2;
+}
+
+.div-title{
+    background-color:#FF4949;
+    color:#FFCD38;
+}
+h1{
+    text-align:center;
+}
+
+main{
+    background-color: black;
+    padding:1vh;
+}
+
+
+.item-main{
+    flex:1 1 2vw;
+    align-self: stretch;
+}
+
+.item-double{
+    flex-grow:2;
+} 
+
+section{
+    background-color:#247881;
+    color:#2FA4FF;
+}
+
+article{
+    padding:1vw;
+    text-align: center;
+}
+
+.item-article{
+    flex-basis:50%;
+}
+section p{
+    color:aquamarine;
+}
+
+aside{
+    background-color:#FF5DA2;
+    color:#FFE162;
+    padding:1vw; 
+}
+
+h3{
+    text-align: center;
+}
+footer{
+    background-color:black;
+    padding:1vh;
+}
+
+footer p{
+    background-color: #F47340;
+    text-align: center;
+}
+
+@media (min-width: 1201px) {  
+    .div-max-width {
+        display:inline-block;
+    }
+    main{
+        padding: 0;
+    }
+    header, main, article, section p, aside,footer{
+        display:none;
+    }   
+}
+
+@media (max-width: 768px){
+    .item-main{
+        flex:1 1 auto;
+    }
+    aside{
+        margin-top:1vh;
+    }
+}
+ 
+@media (min-width:320px) and (max-width:768px){
+    main{
+        background-color: yellow;
+    }
+    
+}
+
+@media(max-width:320px){
+    .div-header{
+        flex-flow:column wrap;
+        justify-content: center;
+        align-content:center;
+    }
+    .item-article{
+        flex-basis:auto;
+    }
+
+}
